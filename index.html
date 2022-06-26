@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Simplified</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
     <section>
       <nav>
         <img src="/Assets/FES.svg" class="logo" />
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#discord">Discord</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#discord">Discord</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
       <header>
         <div class="row">
@@ -25,7 +27,9 @@
             <p class="subheader">Go from absolute beginner to pro with a simplified process</p>
             <button class="button" >Start Now</button>
           </div>
-          <figure><img src="/Assets/laptop.png" /></figure>
+          <figure class="home-img-wrapper">
+            <img class="home-img" src="/Assets/laptop.png" />
+          </figure>
       </div>
     </header>
     </section>
@@ -84,8 +88,10 @@
             <span>Email</span>
             <input type="email" placeholder="jane@example.com"></input>
             <span>Message</span>
-            <textarea type="text" class="message" placeholder="Nice website, let's connect!"></textarea>
-          <button class="button">Contact Us!</button>
+            <textarea type="text" cols=" 30" rows="10" placeholder="Nice website, let's connect!"></textarea>
+            <div class="button-wrapper">
+              <button class="button">Submit</button>
+            </div>
         </form>
       </section>
     </main>

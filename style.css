@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*Nav Bar */
 nav{
     height: 70px;
@@ -13,7 +17,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 16px; 
-    background-color: #cefeff;
+    background-color: #cafdff;
 }
 
 a{ /*styles all anchor <a> tags */
@@ -39,11 +43,16 @@ li{
 
 header{
     background-color: #eadcff;
-    height: calc(100vh - 70px);
-    padding: 24px;
+    min-height: calc(100vh - 70px);
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+img{
+    width: 100%;
+    border-radius: 4px;
 }
 
 h1{
@@ -93,7 +102,7 @@ a:hover{
 
 #about{
     background-color: #f8ffdc;
-    height: calc(100vh + 70px);
+    min-height: calc(100vh + 70px);
 }
 
 h2{
@@ -104,21 +113,20 @@ h2{
 
 .section-description{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .about-image-wrapper{
     width: 40%;
+    padding: 0 24px;
 }
 
-img{
-    width: 100%;
-}
 
 .section-description-wrapper{
     width: 60%;
-}
-
-.about-image-wrapper, .section-description-wrapper{
     padding: 0 24px;
 }
 
@@ -132,14 +140,14 @@ img{
 
 #discord{
     background-color: #cefeff;
-    height: calc(100vh + 70px);
+    min-height: calc(100vh + 70px);
 }
 
 /* CONTACT */
 
 #contact{
     background-color: #dce9ff;
-    height: calc(100vh + 70px);
+    min-height: calc(100vh + 70px);
 }
 
 form{
@@ -185,17 +193,27 @@ footer{
     padding: 0 16px;
 }
 
-/* Smart phones, tablets, large smartphones */
 
-@media (max-width: 728px){
+/* Smart phones, tablets, large smartphones formatting */
+
+@media (max-width: 768px){
     .row{
         flex-direction: column;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .home-description, .home-img-wrapper{
+        width: 100%;
     }
 
     .home-description{
         margin-bottom:24px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .button{
@@ -212,25 +230,28 @@ footer{
         font-size: 28px;
     }
 
-    ul{
-        display: none;
-    }
-
     .section-description{
         flex-direction: column;
     }
 
-    .section-description-wrapper{
-        width: 100%;
-    }
-    .about-image-wrapper{
+    .section-description-wrapper, .about-image-wrapper{
         width: 100%;
     }
 
     #discord .section-description{
         flex-direction: column-reverse;
     }
-    
+
+    form{
+        padding: 0 24px;
+    }
+
+    .button-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     footer{
         padding: 48px 24px;
     }
@@ -248,3 +269,13 @@ footer{
         margin-bottom: 24px;
     }
 }
+
+@media (max-width: 480px) {
+    .footer__logo {
+      max-width: 320px;
+    }
+  
+    .footer__link {
+      font-size: 16px;
+    }
+  }
